@@ -1,0 +1,14 @@
+/*
+  Theme Name: Greentest
+  Theme URI: http://example.com/
+  Author: Nemanja Falb
+  Author URI: http://example.com/
+  Description: Description
+  Version: 1.0.0
+  License:
+  License URI:
+  Text Domain: gulp-wordpress
+*/
+body {
+  color: blue;
+  background-color: #fff; }
