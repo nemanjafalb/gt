@@ -1,7 +1,9 @@
-<?php /* Template Name: Greentest */ ?>
+<?php
+/* Template Name: Greentest */
+?>
 <header>
 	<nav>
-		<li><img src="http://localhost/gt/wp-content/uploads/2019/07/logo.jpg" alt=""></li>
+		<li><img src="images/logo.jpg" alt=""></li>
 		<ul>
 			<li><a href="#">Home</a><span class="space">/</span></li>
 			<li><a href="#">Menu link</a><span class="space">/</span></li>
@@ -19,4 +21,4 @@
 				Suspendisse sagittis felis1
 		</button>
 	</section>
-</header>	
+</header>

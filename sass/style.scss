@@ -10,18 +10,51 @@
   Text Domain: gulp-wordpress
 */
 
-$primary-color: #b6c92f;
-$secendary-color: #0099a7;
+/* Import Lato font */
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+      url('../fonts/Lato-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url('../fonts/Lato-Italic.woff2') format('woff2'),
+      url('../fonts/Lato-Italic.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+      url('../fonts/Lato-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato-BoldItalic';
+  src: url('../fonts/Lato-BoldItalic.woff2') format('woff2'),
+      url('../fonts/Lato-BoldItalic.woff') format('woff');
+  font-weight: 700;
+}
+
+/* Global colors */
+$white: #fff;
+$black: #000;
+$green: #b6c92f;
+$bluer: #0099a7;
 
 body {
-  color: blue;
+  font-family: 'Lato', sans-serif;
   background-color: #fff;
 }
 
-<<<<<<< HEAD
+h2 {
+  font-size: 24px;
+}
 
-
-
-=======
-/* Global colors */
->>>>>>> 5cfa97e0550b75a42f44d67889f99b1977794e94
+p {
+  color: #333;
+  font-size: 14px;
+}
