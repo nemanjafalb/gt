@@ -1,18 +1,9 @@
-<?php /* Template Name: Greentest */ ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-
-<?php wp_head(); ?>
-</head>
+<?php
+/* Template Name: Greentest */
+?>
 <header>
 	<nav>
-		<img src="http://localhost/gt/wp-content/uploads/2019/07/logo.jpg" alt="">
+		<img src="images/logo.jpg" alt="">
 		<ul>
 			<li><a href="#">Home</a><span class="space">/</span></li>
 			<li><a class="active" href="#">Menu link</a><span class="space">/</span></li>
@@ -33,4 +24,4 @@
 				Suspendisse sagittis felis
 		</button>
 	</section>
-</header>	
+</header>

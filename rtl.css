@@ -9,11 +9,36 @@
   License URI:
   Text Domain: gulp-wordpress
 */
-nav > ul {
-  list-style-type: none; }
+/* Import Lato font */
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400; }
 
-nav ul li a {
-  text-decoration: none; }
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url("../fonts/Lato-Italic.woff2") format("woff2"), url("../fonts/Lato-Italic.woff") format("woff");
+  font-weight: 400; }
 
-nav ul li .active {
-  color: #0099a7; }
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Lato-BoldItalic';
+  src: url("../fonts/Lato-BoldItalic.woff2") format("woff2"), url("../fonts/Lato-BoldItalic.woff") format("woff");
+  font-weight: 700; }
+
+/* Global colors */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  color: red; }
+
+h2 {
+  font-size: 24px; }
+
+p {
+  color: #333;
+  font-size: 14px; }

@@ -9,28 +9,53 @@
   License URI:
   Text Domain: gulp-wordpress
 */
-$font: 'Lato', sans-serif;
+
+/* Import Lato font */
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+      url('../fonts/Lato-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url('../fonts/Lato-Italic.woff2') format('woff2'),
+      url('../fonts/Lato-Italic.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+      url('../fonts/Lato-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato-BoldItalic';
+  src: url('../fonts/Lato-BoldItalic.woff2') format('woff2'),
+      url('../fonts/Lato-BoldItalic.woff') format('woff');
+  font-weight: 700;
+}
+
+/* Global colors */
 $white: #fff;
 $black: #000;
-$solid-black: #3333;
 $green: #b6c92f;
 $bluer: #0099a7;
 
 body {
-  font-family: $font;
-  width: 1920px;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  color: red;
 }
 
-nav > ul {
-  list-style-type: none;
+h2 {
+  font-size: 24px;
 }
 
-nav ul li a {
-  color: $solid-black;
-  text-decoration: underline;
-  
-}
-
-nav ul li .active {
-  color: $bluer;
+p {
+  color: #333;
+  font-size: 14px;
 }
