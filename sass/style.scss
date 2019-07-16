@@ -1,7 +1,7 @@
 /*
   Theme Name: Greentest
   Theme URI: http://example.com/
-  Author: Nemanja Falb
+  Author: Nemanja Falb1
   Author URI: http://example.com/
   Description: Description
   Version: 1.0.0
@@ -42,11 +42,12 @@
 /* Global colors */
 $white: #fff;
 $black: #000;
+$solid-black: #3333;
 $green: #b6c92f;
 $bluer: #0099a7;
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
   background-color: #fff;
   color: red;
 }
@@ -56,6 +57,6 @@ h2 {
 }
 
 p {
-  color: #333;
+  color: $solid-black;
   font-size: 14px;
 }
