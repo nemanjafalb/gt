@@ -16,7 +16,7 @@
 		<img src="/gt/wp-content/themes/gt/images/objekat.jpg" alt="slika">
 		<button>Ut sed odio quis
 			<hr>
-				Suspendisse sagittis felis
+				Suspendisse sagittis felis1
 		</button>
 	</section>
 </header>	
