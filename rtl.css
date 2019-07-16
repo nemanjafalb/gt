@@ -9,8 +9,11 @@
   License URI:
   Text Domain: gulp-wordpress
 */
-body {
-  color: blue;
-  background-color: #fff; }
+nav > ul {
+  list-style-type: none; }
 
-/* Global colors */
+nav ul li a {
+  text-decoration: none; }
+
+nav ul li .active {
+  color: #0099a7; }

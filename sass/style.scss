@@ -9,19 +9,28 @@
   License URI:
   Text Domain: gulp-wordpress
 */
-
-$primary-color: #b6c92f;
-$secendary-color: #0099a7;
+$font: 'Lato', sans-serif;
+$white: #fff;
+$black: #000;
+$solid-black: #3333;
+$green: #b6c92f;
+$bluer: #0099a7;
 
 body {
-  color: blue;
-  background-color: #fff;
+  font-family: $font;
+  width: 1920px;
 }
 
-<<<<<<< HEAD
+nav > ul {
+  list-style-type: none;
+}
 
+nav ul li a {
+  color: $solid-black;
+  text-decoration: underline;
+  
+}
 
-
-=======
-/* Global colors */
->>>>>>> 5cfa97e0550b75a42f44d67889f99b1977794e94
+nav ul li .active {
+  color: $bluer;
+}
