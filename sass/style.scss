@@ -58,6 +58,7 @@ body {
 
 h2 {
   font-size: 24px;
+  font-weight: 400;
 }
 
 p {
@@ -97,6 +98,15 @@ p {
   }
 }
 
+.overlay {
+  display: none;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: $bluer;
+  opacity: 0.851;
+}
+
 .gallery-image {
   position: relative;
   display: flex;
@@ -111,10 +121,10 @@ p {
   }
 
   &:hover {
+    cursor: pointer;
 
-    &:before {
+    & .overlay {
       display: block;
-      background-color: #fff;
     }
 
     &:after {
@@ -229,6 +239,8 @@ p {
 
   & h2 {
     text-transform: uppercase;
+    color: $white;
+    font-weight: 400;
   }
 
   & p {
@@ -262,6 +274,7 @@ p {
     font-size: 18px;
     text-transform: uppercase;
     color: $white;
+    font-weight: 400;
   }
 
   & span {

@@ -18,16 +18,20 @@ get_header(); ?>
   <h2>Gallery</h2>
   <p>Ut sed odio quis sem bibendum tristique</p>
   <div class="gallery-row clearfix">
-    <div class="gallery-image overlay red">
+    <div class="gallery-image">
+      <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image1.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image overlay">
+    <div class="gallery-image">
+    <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image2.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image overlay">
+    <div class="gallery-image">
+    <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image3.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image overlay">
+    <div class="gallery-image">
+    <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image4.jpg" alt="Gallery image">
     </div>
   </div>
