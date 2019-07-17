@@ -1,7 +1,7 @@
 /*
   Theme Name: Greentest
   Theme URI: http://example.com/
-  Author: Nemanja Falb1
+  Author: Nemanja Falb
   Author URI: http://example.com/
   Description: Description
   Version: 1.0.0
@@ -12,7 +12,7 @@
 
 /* Import Lato font */
 @font-face {
-  font-family: 'Lato-Regular';
+  font-family: 'Lato';
   src: url('../fonts/Lato-Regular.woff2') format('woff2'),
       url('../fonts/Lato-Regular.woff') format('woff');
   font-weight: 400;
@@ -40,23 +40,197 @@
 }
 
 /* Global colors */
+$font: 'Lato-Italic', sans-serif;
 $white: #fff;
 $black: #000;
-$solid-black: #3333;
+$solidblack: #333;
 $green: #b6c92f;
 $bluer: #0099a7;
 
-body {
-  font-family: 'Lato-Regular', sans-serif;
-  background-color: #fff;
-  color: red;
+* {
+  box-sizing: border-box;
 }
+body {
+  margin: 0;
+  padding: 0;
+  width: 1080px;
+  font-family: $font;
+  background-color: #fff;
+}
+/* HEADER */
+
+header {
+  margin: 0 375px 0 375px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1170px;
+}
+
+nav {
+  
+  display: flex;
+}
+
+.logo {
+  margin: 33px 0 35px 0
+}
+
+nav ul  {
+  display: inline-block;
+  list-style-type: disc;
+  margin: 42px 0px 43px 406px;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+nav ul li .active {
+  color: $bluer;
+}
+
+nav ul li:nth-child(-n+3) {
+  &::after {
+    content: "/";
+    padding: 0 5px;
+    color: $green;
+  }
+}
+
+nav ul li .space {
+  color: $green;
+  padding: 0 5px;
+}
+
+nav ul li button {
+  margin-left: 113px;
+  padding: 12px 27px;
+  background-color: $green;
+  border: none; 
+  
+}
+
+nav ul li button a {
+  color: $white;
+  font-weight: 700;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: $solidblack;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+/* END HEADER */
+
+/* BIG SLIDER */
+.big-slider {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;;
+}
+
+.slider > img {
+  height: auto;
+  margin: 0 30px;
+}
+
+.big-slider>.container {
+  margin: 330px 0;
+  position: absolute;
+  left: 50%;
+}
+
+.big-slider>.container> h1, p {
+  text-align: center;
+  font-size: 5rem;
+  color: $white;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.big-slider .buttom {
+  position: absolute;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    left: 50%;
+    bottom: 40px;
+    top: 1000px;
+    
+  
+}
+
+.big-slider .buttom>button {
+  background-color: $green;
+  color: $white;
+  border: solid 3px $white;
+  padding: 5px;
+}
+
+/* END BIG SLIDER */
+
+/* WHAT WE DO */
+
+.what-we-do {
+  display: grid;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.what-we-do>.container {
+  margin-top: 77px;
+  margin-bottom: 38px;
+  display: block;
+  text-align: center;
+  clear: both;
+  width: 770px;
+  
+}
+
+.what-we-do>.box-three>.container {
+  padding: 10px;
+}
+
+.what-we-do>.container>h2, p {
+  color: $solidblack;
+}
+
+.box-three {
+  position: relative;
+  display: flex;
+
+  & span {
+    position: absolute;
+    transform: translateY(-30%);
+    font-size: 60px;
+    color: $green;
+  }
+}
+
+.space-div {
+  padding: 10px;
+}
+
+/* END WHAT WE DO */
 
 h2 {
   font-size: 24px;
 }
 
 p {
-  color: $solid-black;
   font-size: 14px;
 }

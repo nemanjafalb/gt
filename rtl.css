@@ -11,7 +11,7 @@
 */
 /* Import Lato font */
 @font-face {
-  font-family: 'Lato-Regular';
+  font-family: 'Lato';
   src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
   font-weight: 400; }
 
@@ -31,14 +31,150 @@
   font-weight: 700; }
 
 /* Global colors */
-body {
-  font-family: 'Lato-Regular', sans-serif;
-  background-color: #fff;
-  color: red; }
+* {
+  box-sizing: border-box; }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 1080px;
+  font-family: "Lato-Italic", sans-serif;
+  background-color: #fff; }
+
+/* HEADER */
+header {
+  margin: 0 375px 0 375px; }
+
+.container {
+  margin: 0 auto;
+  width: 1170px; }
+
+nav {
+  display: -ms-flexbox;
+  display: flex; }
+
+.logo {
+  margin: 33px 0 35px 0; }
+
+nav ul {
+  display: inline-block;
+  list-style-type: disc;
+  margin: 42px 406px 43px 0px;
+  padding: 0; }
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0; }
+
+nav ul li .active {
+  color: #0099a7; }
+
+nav ul li:nth-child(-n+3)::after {
+  content: "/";
+  padding: 0 5px;
+  color: #b6c92f; }
+
+nav ul li .space {
+  color: #b6c92f;
+  padding: 0 5px; }
+
+nav ul li button {
+  margin-right: 113px;
+  padding: 12px 27px;
+  background-color: #b6c92f;
+  border: none; }
+
+nav ul li button a {
+  color: #fff;
+  font-weight: 700; }
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+/* END HEADER */
+/* BIG SLIDER */
+.big-slider {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0; }
+
+.slider > img {
+  height: auto;
+  margin: 0 30px; }
+
+.big-slider > .container {
+  margin: 330px 0;
+  position: absolute;
+  right: 50%; }
+
+.big-slider > .container > h1, p {
+  text-align: center;
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  padding: 0; }
+
+.big-slider .buttom {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  right: 50%;
+  bottom: 40px;
+  top: 1000px; }
+
+.big-slider .buttom > button {
+  background-color: #b6c92f;
+  color: #fff;
+  border: solid 3px #fff;
+  padding: 5px; }
+
+/* END BIG SLIDER */
+/* WHAT WE DO */
+.what-we-do {
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px; }
+
+.what-we-do > .container {
+  margin-top: 77px;
+  margin-bottom: 38px;
+  display: block;
+  text-align: center;
+  clear: both;
+  width: 770px; }
+
+.what-we-do > .box-three > .container {
+  padding: 10px; }
+
+.what-we-do > .container > h2, p {
+  color: #333; }
+
+.box-three {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex; }
+  .box-three span {
+    position: absolute;
+    transform: translateY(-30%);
+    font-size: 60px;
+    color: #b6c92f; }
+
+.space-div {
+  padding: 10px; }
+
+/* END WHAT WE DO */
 h2 {
   font-size: 24px; }
 
 p {
-  color: #333;
   font-size: 14px; }
