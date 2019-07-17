@@ -31,8 +31,13 @@
   font-weight: 700; }
 
 /* Global colors */
+* {
+  box-sizing: border-box; }
+
 body {
-  font-family: 'Lato-Regular', sans-serif;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   background-color: #fff; }
 
 h2 {
@@ -41,3 +46,195 @@ h2 {
 p {
   color: #333;
   font-size: 14px; }
+
+/* Container */
+.container {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+/* Gallery Section */
+.gallery {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px; }
+  .gallery h2 {
+    text-transform: uppercase; }
+  .gallery p {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 55px; }
+    .gallery p:after {
+      content: "";
+      display: block;
+      padding-top: 25px;
+      margin: 0 auto;
+      width: 40px;
+      border-bottom: 1px solid #0099a7; }
+
+.gallery-image {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 10px; }
+  .gallery-image img {
+    width: 100%;
+    height: 100%; }
+  .gallery-image:hover:before {
+    display: block;
+    background-color: #fff; }
+  .gallery-image:hover:after {
+    position: absolute;
+    content: "IMAGE 1";
+    border: 1px solid #fff;
+    padding: 15px 38px;
+    font-size: 18px;
+    color: #fff; }
+
+@media only screen and (min-width: 768px) {
+  .gallery-image {
+    width: 47%;
+    float: left; } }
+
+@media only screen and (min-width: 1024px) {
+  .gallery-row {
+    display: -ms-flexbox;
+    display: flex; }
+  .gallery-image {
+    width: 50%; } }
+
+/* Find Us Section */
+.find-us {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 752px;
+  background: url(images/find-us-bg.jpg) no-repeat;
+  background-size: auto 100%;
+  background-position: right; }
+
+.find-us__content {
+  position: relative;
+  left: 5%;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 750px;
+  background: #fff;
+  box-shadow: 0px 8px 15px 0px rgba(3, 3, 3, 0.15); }
+  .find-us__content h2 {
+    text-transform: uppercase; }
+    .find-us__content h2:after {
+      content: "";
+      display: block;
+      margin-top: 25px;
+      width: 40px;
+      border-bottom: 1px solid #0099a7; }
+  .find-us__content p {
+    line-height: 23px; }
+
+.find-us__image {
+  height: 0; }
+
+@media only screen and (max-width: 822px) {
+  .find-us__content {
+    left: 0;
+    width: 100%; }
+  .find-us__image {
+    display: none; } }
+
+.find-us__text {
+  display: inline-block;
+  margin: 40px 60px; }
+
+.flytime {
+  display: -ms-flexbox;
+  display: flex; }
+
+.airplane-icon {
+  text-align: center;
+  margin-right: 36px; }
+  .airplane-icon p {
+    font-size: 18px;
+    margin: 5px; }
+  .airplane-icon span {
+    font-size: 16px;
+    font-style: italic;
+    color: #888; }
+
+/* Projects Section */
+.projects {
+  padding-top: 113px;
+  text-align: center;
+  background: #0099a7; }
+  .projects h2 {
+    text-transform: uppercase; }
+  .projects p {
+    font-style: italic;
+    color: #e4eab9; }
+    .projects p:after {
+      content: "";
+      border-bottom: 1px solid #fff;
+      width: 40px;
+      display: block;
+      margin: 0 auto;
+      padding-top: 25px; }
+
+.projects-items {
+  margin: 0 15px;
+  padding-top: 60px; }
+  .projects-items img {
+    width: 100%; }
+
+.project-item {
+  text-align: left; }
+  .project-item h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff; }
+  .project-item span {
+    color: #e4eab9;
+    line-height: 23px; }
+    .project-item span:after {
+      content: "---";
+      display: block;
+      color: #fff;
+      margin-bottom: 60px; }
+
+@media only screen and (min-width: 768px) {
+  .project-item {
+    width: 50%;
+    float: left;
+    padding: 0 15px; } }
+
+@media only screen and (min-width: 1024px) {
+  .projects-items {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0; } }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }

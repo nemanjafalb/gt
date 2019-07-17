@@ -14,28 +14,28 @@
 @font-face {
   font-family: 'Lato-Regular';
   src: url('../fonts/Lato-Regular.woff2') format('woff2'),
-      url('../fonts/Lato-Regular.woff') format('woff');
+    url('../fonts/Lato-Regular.woff') format('woff');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Lato-Italic';
   src: url('../fonts/Lato-Italic.woff2') format('woff2'),
-      url('../fonts/Lato-Italic.woff') format('woff');
+    url('../fonts/Lato-Italic.woff') format('woff');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Lato-Bold';
   src: url('../fonts/Lato-Bold.woff2') format('woff2'),
-      url('../fonts/Lato-Bold.woff') format('woff');
+    url('../fonts/Lato-Bold.woff') format('woff');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Lato-BoldItalic';
   src: url('../fonts/Lato-BoldItalic.woff2') format('woff2'),
-      url('../fonts/Lato-BoldItalic.woff') format('woff');
+    url('../fonts/Lato-BoldItalic.woff') format('woff');
   font-weight: 700;
 }
 
@@ -45,8 +45,14 @@ $black: #000;
 $green: #b6c92f;
 $bluer: #0099a7;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Lato-Regular', sans-serif;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   background-color: #fff;
 }
 
@@ -57,4 +63,259 @@ h2 {
 p {
   color: #333;
   font-size: 14px;
+}
+
+/* Container */
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* Gallery Section */
+.gallery {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+
+  & h2 {
+    text-transform: uppercase;
+  }
+
+  & p {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 55px;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-top: 25px;
+      margin: 0 auto;
+      width: 40px;
+      border-bottom: 1px solid $bluer;
+    }
+  }
+}
+
+.gallery-image {
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+
+    &:before {
+      display: block;
+      background-color: #fff;
+    }
+
+    &:after {
+      position: absolute;
+      content: "IMAGE 1";
+      border: 1px solid $white;
+      padding: 15px 38px;
+      font-size: 18px;
+      color: $white;
+    }
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery-image {
+    width: 47%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gallery-row {
+    display: flex;
+  }
+
+  .gallery-image {
+    width: 50%;
+  }
+}
+
+/* Find Us Section */
+.find-us {
+  display: flex;
+  align-items: center;
+  min-height: 752px;
+  background: url(images/find-us-bg.jpg) no-repeat;
+  background-size: auto 100%;
+  background-position: right;
+}
+
+.find-us__content {
+  position: relative;
+  left: 5%;
+  display: flex;
+  max-width: 750px;
+  background: $white;
+  box-shadow: 0px 8px 15px 0px rgba(3, 3, 3, 0.15);
+
+  & h2 {
+    text-transform: uppercase;
+
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 25px;
+      width: 40px;
+      border-bottom: 1px solid $bluer;
+    }
+  }
+
+  & p {
+    line-height: 23px;
+  }
+}
+
+.find-us__image {
+  height: 0;
+}
+
+@media only screen and (max-width: 822px) {
+  .find-us__content {
+    left: 0;
+    width: 100%;
+  }
+
+  .find-us__image {
+    display: none;
+  }
+}
+
+.find-us__text {
+  display: inline-block;
+  margin: 40px 60px;
+}
+
+.flytime {
+  display: flex;
+}
+
+.airplane-icon {
+  text-align: center;
+  margin-right: 36px;
+
+  & p {
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  & span {
+    font-size: 16px;
+    font-style: italic;
+    color: #888;
+  }
+}
+
+/* Projects Section */
+.projects {
+  padding-top: 113px;
+  text-align: center;
+  background: $bluer;
+
+  & h2 {
+    text-transform: uppercase;
+  }
+
+  & p {
+    font-style: italic;
+    color: #e4eab9;
+
+    &:after {
+      content: "";
+      border-bottom: 1px solid $white;
+      width: 40px;
+      display: block;
+      margin: 0 auto;
+      padding-top: 25px;
+    }
+  }
+}
+
+.projects-items {
+  margin: 0 15px;
+  padding-top: 60px;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.project-item {
+  text-align: left;
+
+  & h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  & span {
+    color: #e4eab9;
+    line-height: 23px;
+
+    &:after {
+      content: "---";
+      display: block;
+      color: $white;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .project-item {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .projects-items {
+    display: flex;
+    margin: 0;
+  }
+}
+
+
+
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
 }
