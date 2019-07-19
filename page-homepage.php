@@ -1,88 +1,85 @@
 <?php
-/* Template Name: Greentest */
-?>
-<?php wp_head(); ?>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="/gt/wp-content/themes/gt/images/logo.jpg" alt="logo">
-            </div>
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Menu link</a></li>
-                <li><a href="#">Menu link</a></li>
-                <li><a href="#">Menu link</a></li>
-                <li><button><a href="">Button</a></button></li>
-            </ul>
-        </nav>
-    </header>    
-	<section class="big-slider">
-        <div class="container">
-            <h1>Nullam in nisl posuere</h1>
-            <p>In maximus blandit tortor, ut efficitur tortor suscipit vitae.</p>
-        </div>
-        <div class="slider">
-            <div class="left"></div>
-            <div class="right"></div>
-            <img src="/gt/wp-content/themes/gt/images/objekat.jpg" alt="slika">
-            
-            <!-- <img src="" alt="slika"> -->
-        </div>
-        <div class="buttom">
-            <button>Ut sed odio quis
-                <hr>
-                    Suspendisse sagittis felis
-            </button>
-        </div>
-    </section>
-    <section class="what-we-do">
-        <div class="container">
-            <h1>Curabitur lacus ipsum</h1>
-            <p>In maximus blandit tortor, ut efficitur tortor suscipit vitae.</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="box-three">
-            <div class="space-div">
-                <img src="/gt/wp-content/themes/gt/images/image1.jpg" alt="">
-                <span>01</span>
-                <h2>lacus</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
-            </div>
-            <div class="space-div">
-                <img src="/gt/wp-content/themes/gt/images/image1.jpg" alt="">
-                <span>01</span>
-                <h2>lacus</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
-            </div>
-            <div class="space-div">
-                <img src="/gt/wp-content/themes/gt/images/image1.jpg" alt="">
-                <span>01</span>
-                <h2>lacus</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-        </div>
-        
-    </section>
 /* Template Name: Home page */
 get_header(); ?>
 <header>
-  <nav>
-    <li><img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/logo.jpg" alt="Logo"></li>
+  <nav class="container">
+    <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/logo.jpg" alt="Logo">
     <ul>
-      <li><a href="#">Home</a><span class="space">/</span></li>
-      <li><a href="#">Menu link</a><span class="space">/</span></li>
-      <li><a href="#">Menu link</a><span class="space">/</span></li>
-      <li><a href="#">Menu link</a><span class="space">/</span></li>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">Menu link</a></li>
+      <li><a href="#">Menu link</a></li>
+      <li><a href="#">Menu link</a></li>
       <li class="button"><a href="#">Button</a></li>
     </ul>
   </nav>
 </header>
+<section class="big-slider">
+    <div class="big-slider_object">
+        <img class="mySlides" src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="Gallery image">
+        <img class="mySlides" src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 5.jpg" alt="Gallery image">
+    <div class="text">
+        <h1>Nullam in nisl posuere</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+      <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
+      <a class="next" onclick="plusDivs(1)">&#10095;</a>
+    </div>
+    <a class="button-slider" href="#"><span>Ut sed odio quis</span><span>Suspendisse sagittis felis</span></a>
+
+    <!-- <div class="big-slider_object">
+        <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="Gallery image">
+    <div class="text">
+        <h1>Nullam in nisl posuere</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
+    </div>
+    </div> -->
+</section>
+<!--Whar we do-->
+<section class="what-we-do">
+  <div class="container">
+    <h1>Curabitur lacus ipsum</h1>
+    <p class="first">In maximus blandit tortor, ut efficitur tortor suscipit vitae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="box-three">
+  <div class="box-three_items">
+      <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 7.jpg" alt="images">
+      <span class="number">01</span>
+      <h2>lacus</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+      <span class="line"></span>
+    </div>
+    <div class="box-three_items">
+      <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 6.jpg" alt="images">
+      <span class="number">02</span>
+      <h2>lacus</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+      <span class="line"></span>
+    </div>
+    <div class="box-three_items">
+      <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 5.jpg" alt="images">
+      <span class="number">03</span>
+      <h2>lacus</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+      <span class="line"></span>
+    </div>
+  </div>
+  <span class="vertical-line"></span>
+</section>
+<!--End-->
+<section class="testimonials">
+  <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="testimonials-img">
+  <div class="container">
+    <h1>Lorem</h1>
+    <span class="line"></span>
+  </div>
+  <div class="testimonials-list">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>PopArt Studio</p>
+  </div>
+  <a class="prev" onclick="listSlides(-1)">&#10094;</a>
+  <a class="next" onclick="listSlides(1)">&#10095;</a>
+</section>
 <!-- Gallery Section -->
 <section class="gallery">
   <h2>Gallery</h2>
@@ -168,3 +165,5 @@ get_header(); ?>
     </div>
   </div>
 </section><!-- END Projects -->
+<script src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/js/big-slider.js"></script>
+
