@@ -16,7 +16,7 @@ get_header(); ?>
 <section class="big-slider">
     <div class="big-slider_object">
         <img class="mySlides" src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="Gallery image">
-        <img class="mySlides" src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 5.jpg" alt="Gallery image">
+        <img class="mySlides" src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="Gallery image">
     <div class="text">
         <h1>Nullam in nisl posuere</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -67,6 +67,7 @@ get_header(); ?>
   <span class="vertical-line"></span>
 </section>
 <!--End-->
+<!--Testamonials-->
 <section class="testimonials">
   <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="testimonials-img">
   <div class="container">
@@ -77,24 +78,33 @@ get_header(); ?>
     <p>Lorem ipsum dolor sit amet.</p>
     <p>PopArt Studio</p>
   </div>
-  <a class="prev" onclick="listSlides(-1)">&#10094;</a>
-  <a class="next" onclick="listSlides(1)">&#10095;</a>
+  <div class="testimonials-list">
+    <p>Lorem.</p>
+    <p>PopArt Studio</p>
+  </div>
+  <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
+  <a class="next" onclick="plusDivs(1)">&#10095;</a>
 </section>
+<!--End-->
 <!-- Gallery Section -->
 <section class="gallery">
   <h2>Gallery</h2>
   <p>Ut sed odio quis sem bibendum tristique</p>
   <div class="gallery-row clearfix">
-    <div class="gallery-image overlay red">
+    <div class="gallery-image">
+      <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image1.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image overlay">
+    <div class="gallery-image">
+    <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image2.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image overlay">
+    <div class="gallery-image">
+    <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image3.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image overlay">
+    <div class="gallery-image">
+    <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image4.jpg" alt="Gallery image">
     </div>
   </div>
@@ -164,6 +174,43 @@ get_header(); ?>
       </div>
     </div>
   </div>
-</section><!-- END Projects -->
-<script src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/js/big-slider.js"></script>
+</section>
+<section class="latest-news">
+  <div class="news-header">
+    <h1>Last news</h1>
+  </div>
+  <div class="latest-news_three">
+    <div class="container">
+      <h2>Quiskue vel lectus</h2>
+      <p class="date">February 10, 2016</p>
+      <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news1.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
+      <a href="#">Continue</a>
+    </div>
+    <div class="container">
+      <h2>Quiskue vel lectus</h2>
+      <p class="date">February 10, 2016</p>
+      <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news2.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
+      <a href="#">Continue</a>
+    </div>
+    <div class="container">
+      <h2>Quiskue vel lectus</h2>
+      <p class="date">February 10, 2016</p>
+      <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news3.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
+      <a href="#">Continue</a>
+    </div>
+  </div>
+</section>
+<section class="subscribe">
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, similique.</p>
+  <form>
+    <input type="email" name="emailaddress" placeholder="Enter e-mail">
+    <a href="#">Subscribe</a>
+  </form>
+</section>
+<!-- END Projects -->
+<script src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/js/slider.js"></script>
+
 

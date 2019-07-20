@@ -37,6 +37,8 @@
 
 body {
   margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  color: #333;
   padding: 0; }
 
 header {
@@ -101,7 +103,7 @@ nav ul li a {
   text-transform: uppercase;
   font-weight: 500; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   nav {
     -ms-flex-direction: column;
         flex-direction: column; }
@@ -110,7 +112,7 @@ nav ul li a {
   nav ul > .button {
     margin-right: 10px; } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   nav {
     -ms-flex-direction: column;
         flex-direction: column; }
@@ -166,6 +168,10 @@ nav ul li a {
 .big-slider > .big-slider_object > img {
   width: 100%; }
 
+h2 {
+  font-size: 24px;
+  font-weight: 400; }
+
 a.button-slider {
   position: absolute;
   display: -ms-flexbox;
@@ -197,6 +203,12 @@ a.button-slider {
 @media only screen and (max-width: 1024px) {
   .big-slider .text {
     bottom: 80px; } }
+
+@media only screen and (max-width: 400px) {
+  .big-slider .text {
+    display: none; }
+  a.button-slider {
+    display: none; } }
 
 /* End Big slider */
 /* What we do */
@@ -247,7 +259,7 @@ a.button-slider {
   display: block;
   position: absolute;
   color: #b6c92f;
-  bottom: 130px;
+  bottom: 140px;
   font-size: 3rem; }
 
 .box-three_items .line {
@@ -258,7 +270,7 @@ a.button-slider {
 .box-three_items {
   margin: 0 auto;
   display: block;
-  padding: 20px;
+  padding: 25px 8px;
   width: 100%; }
 
 .vertical-line {
@@ -268,31 +280,35 @@ a.button-slider {
   transform: rotate(-90deg);
   width: 80px; }
 
-@media only screen and (max-width: 768px) {
-  .box-three {
-    -ms-flex-direction: column;
-        flex-direction: column; }
-  .box-three_items {
-    position: relative;
-    padding: 0; }
-  .box-three_items .number {
-    bottom: 120px; }
-  .box-three_items img {
-    width: 100%;
-    height: 100%; } }
-
 @media only screen and (max-width: 1024px) {
   .box-three {
     -ms-flex-direction: column;
         flex-direction: column; }
   .box-three_items {
     position: relative;
-    padding: 0; }
+    padding-top: 25px; }
   .box-three_items .number {
     bottom: 120px; }
   .box-three_items img {
     width: 100%;
     height: 100%; } }
+
+@media only screen and (max-width: 768px) {
+  .box-three {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .box-three_items {
+    position: relative;
+    padding-top: 25px; }
+  .box-three_items .number {
+    bottom: 100px; }
+  .box-three_items img {
+    width: 100%;
+    height: 100%; } }
+
+@media only screen and (max-width: 400px) {
+  .box-three_items .number {
+    bottom: 140px; } }
 
 /* End */
 /* Container */
@@ -326,7 +342,8 @@ a.button-slider {
   display: block;
   position: relative;
   width: 100%;
-  -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, color-stop(0, transparent), color-stop(0.5, black)); }
+  -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, color-stop(0, transparent), color-stop(0.5, black));
+          mask-image: -webkit-gradient(linear, center top, center bottom, color-stop(0, transparent), color-stop(0.5, black)); }
 
 .testimonials .testimonials-list {
   position: absolute;
@@ -410,6 +427,14 @@ a.button-slider {
       width: 40px;
       border-bottom: 1px solid #0099a7; }
 
+.overlay {
+  display: none;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: #0099a7;
+  opacity: 0.851; }
+
 .gallery-image {
   position: relative;
   display: -ms-flexbox;
@@ -424,16 +449,17 @@ a.button-slider {
   .gallery-image img {
     width: 100%;
     height: 100%; }
-  .gallery-image:hover:before {
-    display: block;
-    background-color: #fff; }
-  .gallery-image:hover:after {
-    position: absolute;
-    content: "IMAGE 1";
-    border: 1px solid #fff;
-    padding: 15px 38px;
-    font-size: 18px;
-    color: #fff; }
+  .gallery-image:hover {
+    cursor: pointer; }
+    .gallery-image:hover .overlay {
+      display: block; }
+    .gallery-image:hover:after {
+      position: absolute;
+      content: "IMAGE 1";
+      border: 1px solid #fff;
+      padding: 15px 38px;
+      font-size: 18px;
+      color: #fff; }
 
 @media only screen and (min-width: 768px) {
   .gallery-image {
@@ -519,7 +545,9 @@ a.button-slider {
   text-align: center;
   background: #0099a7; }
   .projects h2 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400; }
   .projects p {
     font-style: italic;
     color: #e4eab9; }
@@ -542,7 +570,8 @@ a.button-slider {
   .project-item h3 {
     font-size: 18px;
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    font-weight: 400; }
   .project-item span {
     color: #e4eab9;
     line-height: 23px; }
@@ -564,6 +593,77 @@ a.button-slider {
     display: flex;
     margin: 0; } }
 
+/*End*/
+/*Last news*/
+.latest-news {
+  margin: 0 auto;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.latest-news .news-header {
+  margin: 0 auto; }
+  .latest-news .news-header h1 {
+    font-weight: 600;
+    text-transform: uppercase; }
+  .latest-news .news-header h1:after {
+    content: "";
+    margin: 25px auto;
+    display: block;
+    border: 1px solid #b6c92f;
+    width: 40px; }
+
+.latest-news .container {
+  margin: 0 15px; }
+  .latest-news .container h2 {
+    font-weight: bold;
+    text-transform: capitalize; }
+  .latest-news .container .date {
+    color: #b6c92f;
+    font-style: italic;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; }
+  .latest-news .container a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #b6c92f; }
+  .latest-news .container img {
+    width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .latest-news_three {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    max-width: 1170px;
+    margin: 0 auto; } }
+
+/*End*/
+/*Subscribe*/
+.subscribe {
+  margin: 10px 0;
+  text-align: center;
+  position: relative;
+  background: rgba(3, 3, 3, 0.1);
+  padding: 10px; }
+
+form {
+  margin: 0 auto;
+  text-align: center; }
+
+form input {
+  border: none;
+  padding: 10px;
+  width: 50%; }
+
+.subscribe p {
+  color: #000; }
+
+/*End*/
 /*
  * Clearfix: contain floats
  *
