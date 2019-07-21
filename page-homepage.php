@@ -136,16 +136,41 @@ get_header(); ?>
 <section class="testimonials">
   <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="testimonials-img">
   <div class="container">
-    <h1>Lorem</h1>
+    <h1><?php $CTAtext = get_field( 'testimonial_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'testimonial_title' , 'option' );
+      } else{
+        echo 'Lorem';
+      } ?></h1>
     <span class="line"></span>
   </div>
   <div class="testimonials-list">
-    <p>Lorem ipsum dolor sit amet.</p>
-    <p>PopArt Studio</p>
+    <p><?php $CTAtext = get_field( 'testimonial_one_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'testimonial_one_p' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet.';
+      } ?></p>
+    <p><?php $CTAtext = get_field( 'testimonial_one_work_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'testimonial_one_work_p' , 'option' );
+      } else{
+        echo 'PopArt Studio';
+      } ?></p>
   </div>
   <div class="testimonials-list">
-    <p>Lorem.</p>
-    <p>PopArt Studio</p>
+    <p><?php $CTAtext = get_field( 'testimonial_second_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'testimonial_second_p' , 'option' );
+      } else{
+        echo 'Lorem...';
+      } ?></p>
+    <p><?php $CTAtext = get_field( 'testimonial_second_work_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'testimonial_second_work_p' , 'option' );
+      } else{
+        echo 'PopArt Studio';
+      } ?></p>
   </div>
   <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
   <a class="next" onclick="plusDivs(1)">&#10095;</a>
@@ -153,8 +178,18 @@ get_header(); ?>
 <!--End-->
 <!-- Gallery Section -->
 <section class="gallery">
-  <h2>Gallery</h2>
-  <p>Ut sed odio quis sem bibendum tristique</p>
+  <h2><?php $CTAtext = get_field( 'gallery_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'gallery_title' , 'option' );
+      } else{
+        echo 'Gallery';
+      } ?></h2>
+  <p><?php $CTAtext = get_field( 'gallery_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'gallery_p' , 'option' );
+      } else{
+        echo 'Ut sed odio quis sem bibendum tristique';
+      } ?></p>
   <div class="gallery-row clearfix">
     <div class="gallery-image" data-aos="fade-in" data-aos-delay="300">
       <span class="overlay"></span>
@@ -181,31 +216,71 @@ get_header(); ?>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/find-us.jpg" alt="Find Us">
     </div>
     <div class="find-us__text">
-      <h2>lorem us</h2>
-      <p>Aenean rutrum eros sed scelerisque posuere. Curabitur dapibus pharetra neque sed ultrices. Vestibulum ante
+      <h2><?php $CTAtext = get_field( 'find_us_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_title' , 'option' );
+      } else{
+        echo 'lorem us';
+      } ?></h2>
+      <p><?php $CTAtext = get_field( 'find_us_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_p' , 'option' );
+      } else{
+        echo 'Aenean rutrum eros sed scelerisque posuere. Curabitur dapibus pharetra neque sed ultrices. Vestibulum ante
         ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean viverra et lacus vitae tempus.
         Aliquam luctus sapien ut dolor eleifend tristique. Vestibulum viverra auctor ex eget porttitor. Morbi
         imperdiet
         dolor eget feugiat tincidunt. Donec sagittis nunc lorem, ut faucibus tellus scelerisque mollis. Sed ac sapien
-        gravida, mattis sapien aliquet, dictum leo. Pellentesque sed pellentesque ex, id rhoncus diam.</p>
+        gravida, mattis sapien aliquet, dictum leo. Pellentesque sed pellentesque ex, id rhoncus diam.';
+      } ?></p>
       <div class="flytime">
         <div class="airplane-icon" data-aos="fade-left" data-aos-delay="200">
           <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/airplane-icon.png"
             alt="airplane icon">
-          <p>Novi Sad</p>
-          <span>2 h 42 min</span>
+          <p><?php $CTAtext = get_field( 'find_us_place_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_place_1' , 'option' );
+      } else{
+        echo 'Novi Sad';
+      } ?></p>
+          <span><?php $CTAtext = get_field( 'find_us_time_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_time_1' , 'option' );
+      } else{
+        echo '2 h 42 min';
+      } ?></span>
         </div>
         <div class="airplane-icon" data-aos="fade-left" data-aos-delay="400">
           <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/airplane-icon.png"
             alt="airplane icon">
-          <p>Novi Sad</p>
-          <span>2 h 42 min</span>
+          <p><?php $CTAtext = get_field( 'find_us_place_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_place_2' , 'option' );
+      } else{
+        echo 'Novi Sad';
+      } ?></p>
+          <span><?php $CTAtext = get_field( 'find_us_time_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_time_2' , 'option' );
+      } else{
+        echo '2 h 42 min';
+      } ?></span>
         </div>
         <div class="airplane-icon" data-aos="fade-left" data-aos-delay="600">
           <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/airplane-icon.png"
             alt="airplane icon">
-          <p>Novi Sad</p>
-          <span>2 h 42 min</span>
+          <p><?php $CTAtext = get_field( 'find_us_place_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_place_3' , 'option' );
+      } else{
+        echo 'Novi Sad';
+      } ?></p>
+          <span><?php $CTAtext = get_field( 'find_us_time_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'find_us_time_3' , 'option' );
+      } else{
+        echo '2 h 42 min';
+      } ?></span>
         </div>
       </div>
     </div>
@@ -214,67 +289,177 @@ get_header(); ?>
 <!-- Projects Section -->
 <section class="projects">
   <div class="container">
-    <h2>Suspendisse sagittis felis non</h2>
-    <p>Phasellus sollicitudin purus sed faucibus hendrerit. Vivamus ultrices lacinia mollis.</p>
+    <h2><?php $CTAtext = get_field( 'project_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_title' , 'option' );
+      } else{
+        echo 'Suspendisse sagittis felis non';
+      } ?></h2>
+    <p><?php $CTAtext = get_field( 'project_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_p' , 'option' );
+      } else{
+        echo 'Phasellus sollicitudin purus sed faucibus hendrerit. Vivamus ultrices lacinia mollis.';
+      } ?></p>
     <div class="projects-items clearfix">
       <div class="project-item" data-aos="fade-up" data-aos-delay="300">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project1.jpg" alt="Project 1">
-      <h3>sagittis non</h3>
-      <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
+      <h3><?php $CTAtext = get_field( 'project_title_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_title_1' , 'option' );
+      } else{
+        echo 'sagittis non';
+      } ?></h3>
+      <span><?php $CTAtext = get_field( 'project_p_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_p_1' , 'option' );
+      } else{
+        echo 'Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.';
+      } ?></span>
       </div>
       <div class="project-item" data-aos="fade-up" data-aos-delay="600">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project2.jpg" alt="Project 2">
-      <h3>lorem bike</h3>
-      <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
+      <h3><?php $CTAtext = get_field( 'project_title_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_title_2' , 'option' );
+      } else{
+        echo 'lorem bike';
+      } ?></h3>
+      <span><?php $CTAtext = get_field( 'project_p_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_p_2' , 'option' );
+      } else{
+        echo 'Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.';
+      } ?></span>
       </div>
       <div class="project-item" data-aos="fade-up" data-aos-delay="900">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project3.jpg" alt="Project 3">
-      <h3>river felis</h3>
-      <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
+      <h3><?php $CTAtext = get_field( 'project_title_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_title_3' , 'option' );
+      } else{
+        echo 'river felis';
+      } ?></h3>
+      <span><?php $CTAtext = get_field( 'project_p_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_p_3' , 'option' );
+      } else{
+        echo 'Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.';
+      } ?></span>
       </div>
       <div class="project-item" data-aos="fade-up" data-aos-delay="1200">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project4.jpg" alt="Project 4">
-      <h3>lux isse</h3>
-      <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
+      <h3><?php $CTAtext = get_field( 'project_title_4' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_title_4' , 'option' );
+      } else{
+        echo 'lux isse';
+      } ?></h3>
+      <span><?php $CTAtext = get_field( 'project_p_4' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'project_p_4' , 'option' );
+      } else{
+        echo 'Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.';
+      } ?></span>
       </div>
     </div>
   </div>
 </section>
+<!--Latest news-->
 <section class="latest-news">
   <div class="news-header">
-    <h1>Last news</h1>
+    <h1><?php $CTAtext = get_field( 'latest_news_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_title' , 'option' );
+      } else{
+        echo 'Last news';
+      } ?></h1>
   </div>
   <div class="latest-news_three">
     <div class="container" data-aos="fade-right" data-aos-delay="300">
-      <h2>Quiskue vel lectus</h2>
-      <p class="date">February 10, 2016</p>
+      <h2><?php $CTAtext = get_field( 'latest_news_1_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_1_title' , 'option' );
+      } else{
+        echo 'Quiskue vel lectus';
+      } ?></h2>
+      <p class="date"><?php $CTAtext = get_field( 'latest_news_date_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_date_1' , 'option' );
+      } else{
+        echo 'February 10, 2016';
+      } ?></p>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news1.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
-      <a href="#">Continue</a>
+      <p><?php $CTAtext = get_field( 'latest_news_p_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_p_1' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.';
+      } ?></p>
+      <a href="<?php the_field('latest_news_link_1'); ?>">Continue</a>
     </div>
     <div class="container" data-aos="fade-right" data-aos-delay="600">
-      <h2>Quiskue vel lectus</h2>
-      <p class="date">February 10, 2016</p>
+      <h2><?php $CTAtext = get_field( 'latest_news_2_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_2_title' , 'option' );
+      } else{
+        echo 'Quiskue vel lectus';
+      } ?></h2>
+      <p class="date"><?php $CTAtext = get_field( 'latest_news_date_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_date_2' , 'option' );
+      } else{
+        echo 'February 10, 2016';
+      } ?></p>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news2.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
-      <a href="#">Continue</a>
+      <p><?php $CTAtext = get_field( 'latest_news_p_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_p_2' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.';
+      } ?></p>
+      <a href="<?php the_field('latest_news_link_2'); ?>">Continue</a>
     </div>
     <div class="container" data-aos="fade-right" data-aos-delay="900">
-      <h2>Quiskue vel lectus</h2>
-      <p class="date">February 10, 2016</p>
+      <h2><?php $CTAtext = get_field( 'latest_news_3_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_3_title' , 'option' );
+      } else{
+        echo 'Quiskue vel lectus';
+      } ?></h2>
+      <p class="date"><?php $CTAtext = get_field( 'latest_news_date_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_date_3' , 'option' );
+      } else{
+        echo 'February 10, 2016';
+      } ?></p>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news3.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
-      <a href="#">Continue</a>
+      <p><?php $CTAtext = get_field( 'latest_news_p_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'latest_news_p_3' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.';
+      } ?></p>
+      <a href="<?php the_field('latest_news_link_3'); ?>">Continue</a>
     </div>
   </div>
 </section>
+<!--End-->
+<!--Subscribe-->
 <section class="subscribe">
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, similique.</p>
+  <p><?php $CTAtext = get_field( 'subscribe_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'subscribe_p' , 'option' );
+      } else{
+        echo 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, similique.';
+      } ?></p>
   <form>
     <input type="email" name="emailaddress" placeholder="Enter e-mail">
     <a href="#">Subscribe</a>
   </form>
 </section>
+<!--End-->
+<!--Footer-->
 <section class="footer">
   <div class="container">
     <div class="footer-for">
@@ -283,32 +468,98 @@ get_header(); ?>
       </div>
       <div class="catagory">
       <div class="footer-one">
-        <h3>Popart studio</h3>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <h3><?php $CTAtext = get_field( 'subscribe_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'subscribe_p' , 'option' );
+      } else{
+        echo 'Popart studio';
+      } ?></h3>
+        <a href="<?php the_field('footer_category_one_link_1'); ?>"><?php $CTAtext = get_field( 'footer_category_one_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_one_1' , 'option' );
+      } else{
+        echo 'Link 1';
+      } ?></a>
+        <a href="<?php the_field('footer_category_one_link_2'); ?>"><?php $CTAtext = get_field( 'footer_category_one_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_one_2' , 'option' );
+      } else{
+        echo 'Link 2';
+      } ?></a>
+        <a href="<?php the_field('footer_category_one_link_3'); ?>"><?php $CTAtext = get_field( 'footer_category_one_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_one_3' , 'option' );
+      } else{
+        echo 'Link 3';
+      } ?></a>
       </div>
       <div class="footer-two">
-        <h3>Follow us</h3>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <h3><?php $CTAtext = get_field( 'subscribe_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'subscribe_p' , 'option' );
+      } else{
+        echo 'Follow us';
+      } ?></h3>
+        <a href="<?php the_field('footer_category_two_link_1'); ?>"><?php $CTAtext = get_field( 'footer_category_two_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_two_1' , 'option' );
+      } else{
+        echo 'Link 1';
+      } ?></a>
+        <a href="<?php the_field('footer_category_two_link_2'); ?>"><?php $CTAtext = get_field( 'footer_category_two_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_two_2' , 'option' );
+      } else{
+        echo 'Link 2';
+      } ?></a>
+        <a href="<?php the_field('footer_category_two_link_3'); ?>"><?php $CTAtext = get_field( 'footer_category_two_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_two_3' , 'option' );
+      } else{
+        echo 'Link 3';
+      } ?></a>
       </div>
       <div class="footer-three">
-        <h3>Contact us</h3>
-        <a href="#">Narodnog Fronta</a>
-        <a href="#">Novi Sad</a>
-        <a href="tel:+381 63 123456">+381 63 123456</a>
+        <h3><?php $CTAtext = get_field( 'subscribe_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'subscribe_p' , 'option' );
+      } else{
+        echo 'Contact us';
+      } ?></h3>
+        <a href="<?php the_field('footer_category_three_link_1'); ?>"><?php $CTAtext = get_field( 'footer_category_three_1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_three_1' , 'option' );
+      } else{
+        echo 'Narodnog Fronta';
+      } ?></a>
+        <a href="<?php the_field('footer_category_three_link_2'); ?>"><?php $CTAtext = get_field( 'footer_category_three_2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_three_2' , 'option' );
+      } else{
+        echo 'Novi Sad';
+      } ?></a>
+        <a href="<?php the_field('footer_category_three_link_3'); ?>"><?php $CTAtext = get_field( 'footer_category_three_3' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'footer_category_three_3' , 'option' );
+      } else{
+        echo '+381 63 123456';
+      } ?></a>
       </div>
       </div>
     </div>
     <div class="copy-right">
-      <p>Copyright © PopArt Studio 2017.All rights reserved. PopArt</p>
+      <p><?php $CTAtext = get_field( 'copyright' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'copyright' , 'option' );
+      } else{
+        echo 'Copyright © PopArt Studio 2017.All rights reserved. PopArt';
+      } ?></p>
     </div>
   </div>
 </section>
-<!-- END Projects -->
+<!--Script JS-->
 <script src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/js/slider.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/js/main.js"></script>
+<!-- END Projects -->

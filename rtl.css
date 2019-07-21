@@ -552,7 +552,7 @@ a.button-slider {
       display: block; }
     .gallery-image:hover:after {
       position: absolute;
-      content: "IMAGE 1";
+      content: "PREVIEW";
       border: 1px solid #fff;
       padding: 15px 38px;
       font-size: 18px;
