@@ -156,19 +156,19 @@ get_header(); ?>
   <h2>Gallery</h2>
   <p>Ut sed odio quis sem bibendum tristique</p>
   <div class="gallery-row clearfix">
-    <div class="gallery-image">
+    <div class="gallery-image" data-aos="fade-in" data-aos-delay="300">
       <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image1.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image">
+    <div class="gallery-image" data-aos="fade-in" data-aos-delay="600">
     <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image2.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image">
+    <div class="gallery-image" data-aos="fade-in" data-aos-delay="900">
     <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image3.jpg" alt="Gallery image">
     </div>
-    <div class="gallery-image">
+    <div class="gallery-image" data-aos="fade-in" data-aos-delay="1200">
     <span class="overlay"></span>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/image4.jpg" alt="Gallery image">
     </div>
@@ -189,19 +189,19 @@ get_header(); ?>
         dolor eget feugiat tincidunt. Donec sagittis nunc lorem, ut faucibus tellus scelerisque mollis. Sed ac sapien
         gravida, mattis sapien aliquet, dictum leo. Pellentesque sed pellentesque ex, id rhoncus diam.</p>
       <div class="flytime">
-        <div class="airplane-icon">
+        <div class="airplane-icon" data-aos="fade-left" data-aos-delay="200">
           <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/airplane-icon.png"
             alt="airplane icon">
           <p>Novi Sad</p>
           <span>2 h 42 min</span>
         </div>
-        <div class="airplane-icon">
+        <div class="airplane-icon" data-aos="fade-left" data-aos-delay="400">
           <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/airplane-icon.png"
             alt="airplane icon">
           <p>Novi Sad</p>
           <span>2 h 42 min</span>
         </div>
-        <div class="airplane-icon">
+        <div class="airplane-icon" data-aos="fade-left" data-aos-delay="600">
           <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/airplane-icon.png"
             alt="airplane icon">
           <p>Novi Sad</p>
@@ -217,22 +217,22 @@ get_header(); ?>
     <h2>Suspendisse sagittis felis non</h2>
     <p>Phasellus sollicitudin purus sed faucibus hendrerit. Vivamus ultrices lacinia mollis.</p>
     <div class="projects-items clearfix">
-      <div class="project-item">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="300">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project1.jpg" alt="Project 1">
       <h3>sagittis non</h3>
       <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
       </div>
-      <div class="project-item">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="600">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project2.jpg" alt="Project 2">
       <h3>lorem bike</h3>
       <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
       </div>
-      <div class="project-item">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="900">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project3.jpg" alt="Project 3">
       <h3>river felis</h3>
       <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
       </div>
-      <div class="project-item">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="1200">
         <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/project4.jpg" alt="Project 4">
       <h3>lux isse</h3>
       <span>Pellentesque sed pellentesque ex, id rhoncus diam. Donec at felis pretium, consectetur erat vel, imperdiet diam.</span>
@@ -245,21 +245,21 @@ get_header(); ?>
     <h1>Last news</h1>
   </div>
   <div class="latest-news_three">
-    <div class="container">
+    <div class="container" data-aos="fade-right" data-aos-delay="300">
       <h2>Quiskue vel lectus</h2>
       <p class="date">February 10, 2016</p>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news1.jpg" alt="">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
       <a href="#">Continue</a>
     </div>
-    <div class="container">
+    <div class="container" data-aos="fade-right" data-aos-delay="600">
       <h2>Quiskue vel lectus</h2>
       <p class="date">February 10, 2016</p>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news2.jpg" alt="">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, aspernatur.</p>
       <a href="#">Continue</a>
     </div>
-    <div class="container">
+    <div class="container" data-aos="fade-right" data-aos-delay="900">
       <h2>Quiskue vel lectus</h2>
       <p class="date">February 10, 2016</p>
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/latest-news3.jpg" alt="">
