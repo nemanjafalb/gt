@@ -2,15 +2,28 @@
 /* Template Name: Home page */
 get_header(); ?>
 <header>
+  <input id="burger" type="checkbox" />
+
+  <label for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
   <nav class="container">
     <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/logo.jpg" alt="Logo">
-    <ul>
-      <li><a class="active" href="#">Home</a></li>
+    
+      <?php wp_nav_menu(); ?>
+      <!-- <li><a class="active" href="#">Home</a></li>
       <li><a href="#">Menu link</a></li>
       <li><a href="#">Menu link</a></li>
-      <li><a href="#">Menu link</a></li>
-      <li class="button"><a href="#">Button</a></li>
-    </ul>
+      <li><a href="#">Menu link</a></li> -->
+      <li class="button"><a href="<?php the_field('button_link'); ?>"><?php $CTAtext = get_field( 'button_text' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'button_text' , 'option' );
+      } else{
+        echo 'Button';
+      } ?></a></li>
+    
   </nav>
 </header>
 <section class="big-slider">
@@ -18,49 +31,101 @@ get_header(); ?>
         <img class="mySlides" src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="Gallery image">
         <img class="mySlides" src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="Gallery image">
     <div class="text">
-        <h1>Nullam in nisl posuere</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h1><?php $CTAtext = get_field( 'head_title' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'head_title' , 'option' );
+      } else{
+        echo 'Nullam in nisl posuere';
+      } ?></h1>
+        <p><?php $CTAtext = get_field( 'paragraph' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'paragraph' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+      } ?></p>
     </div>
       <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
       <a class="next" onclick="plusDivs(1)">&#10095;</a>
     </div>
-    <a class="button-slider" href="#"><span>Ut sed odio quis</span><span>Suspendisse sagittis felis</span></a>
-
-    <!-- <div class="big-slider_object">
-        <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/objekat.jpg" alt="Gallery image">
-    <div class="text">
-        <h1>Nullam in nisl posuere</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
-    </div>
-    </div> -->
+    <a class="button-slider" href="<?php the_field('button_slider_link'); ?>"><?php $CTAtext = get_field( 'paragraph' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'paragraph' , 'option' );
+      } else{
+        echo '<span>Ut sed odio quis</span><span>Suspendisse sagittis felis</span>';
+      } ?></a>
 </section>
-<!--Whar we do-->
+<!--What we do-->
 <section class="what-we-do">
-  <div class="container">
-    <h1>Curabitur lacus ipsum</h1>
-    <p class="first">In maximus blandit tortor, ut efficitur tortor suscipit vitae.</p>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+  <div data-aos="fade-right" class="container">
+    <h1><?php $CTAtext = get_field( 'what_we_do_h1' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'what_we_do_h1' , 'option' );
+      } else{
+        echo 'Curabitur lacus ipsum';
+      } ?></h1>
+    <p class="first"><?php $CTAtext = get_field( 'what_we_do_first_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'what_we_do_first_p' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.';
+      } ?></p>
+    <p><?php $CTAtext = get_field( 'what_we_do_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'what_we_do_p' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.';
+      } ?></p>
   </div>
-  <div class="box-three">
-  <div class="box-three_items">
+  <div class="box-three" data-aos="fade-left" data-aos-delay="1200">
+  <div class="box-three_items" data-aos="fade-left" data-aos-delay="600">
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 7.jpg" alt="images">
       <span class="number">01</span>
-      <h2>lacus</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+      <h2><?php $CTAtext = get_field( 'box-three_items_one_h2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'box-three_items_one_h2' , 'option' );
+      } else{
+        echo 'lacus';
+      } ?></h2>
+      <p><?php $CTAtext = get_field( 'box-three_items_one_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'box-three_items_one_p' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...';
+      } ?></p>
       <span class="line"></span>
     </div>
-    <div class="box-three_items">
+    <div class="box-three_items" data-aos="fade-left" data-aos-delay="900">
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 6.jpg" alt="images">
       <span class="number">02</span>
-      <h2>lacus</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+      <h2><?php $CTAtext = get_field( 'box-three_items_two_h2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'box-three_items_two_h2' , 'option' );
+      } else{
+        echo 'lacus';
+      } ?></h2>
+      <p><?php $CTAtext = get_field( 'box-three_items_two_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'box-three_items_two_p' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...';
+      } ?></p>
       <span class="line"></span>
     </div>
-    <div class="box-three_items">
+    <div class="box-three_items" data-aos="fade-left" data-aos-delay="1200">
       <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/Rectangle 5.jpg" alt="images">
       <span class="number">03</span>
-      <h2>lacus</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+      <h2><?php $CTAtext = get_field( 'box-three_items_three_h2' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'box-three_items_three_h2' , 'option' );
+      } else{
+        echo 'lacus';
+      } ?></h2>
+      <p><?php $CTAtext = get_field( 'box-three_items_three_p' , 'option');
+      if (!empty($CTAtext)) {
+        the_field( 'box-three_items_three_p' , 'option' );
+      } else{
+        echo 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...';
+      } ?></p>
       <span class="line"></span>
     </div>
   </div>
@@ -210,7 +275,40 @@ get_header(); ?>
     <a href="#">Subscribe</a>
   </form>
 </section>
+<section class="footer">
+  <div class="container">
+    <div class="footer-for">
+      <div class="footer-logo">
+        <img src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/images/logo.jpg" alt="logo">
+      </div>
+      <div class="catagory">
+      <div class="footer-one">
+        <h3>Popart studio</h3>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+      <div class="footer-two">
+        <h3>Follow us</h3>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+      <div class="footer-three">
+        <h3>Contact us</h3>
+        <a href="#">Narodnog Fronta</a>
+        <a href="#">Novi Sad</a>
+        <a href="tel:+381 63 123456">+381 63 123456</a>
+      </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      <p>Copyright © PopArt Studio 2017.All rights reserved. PopArt</p>
+    </div>
+  </div>
+</section>
 <!-- END Projects -->
 <script src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/js/slider.js"></script>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="<?php echo esc_url( home_url() ); ?>/wp-content/themes/gt/js/main.js"></script>
