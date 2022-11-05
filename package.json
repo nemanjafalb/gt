@@ -6,7 +6,7 @@
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "es6-promise": "^3.2.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^3.0.1",
